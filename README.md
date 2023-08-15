@@ -1,6 +1,6 @@
 To Run The App Locally, Follow The Steps Below:
 
-1.	Clone the repository git clone https://github.com/BS-PMC-2023/BS-PMC-2023-Team12.git
+1.	Clone the repository git clone https://github.com/MaorSaadia/SCEWMS.git
 
 2.	Opens 2 Shells
 
