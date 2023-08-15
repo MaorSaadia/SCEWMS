@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Reset</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+
+        margin: 0;
+        padding: 0;
+        margin-top: 100px;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+
+      input[type='submit'] {
+        background-color: #4caf50;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      input[type='submit']:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Reset</h1>
+      <h2><%= email%></h2>
+      <p>Please enter your new password below:</p>
+      <form action="" method="post">
+        <label for="password">New Password:</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="New Password"
+          required
+        />
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input
+          type="password"
+          name="confirm-password"
+          id="confirm-password"
+          placeholder="Confirm Password"
+          required
+        />
+
+        <input type="submit" value="Reset Password" />
+      </form>
+    </div>
+
+    <script>
+      const form = document.querySelector('form');
+      const newPasswordInput = document.getElementById('password');
+      const confirmPasswordInput = document.getElementById('confirm-password');
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const newPassword = newPasswordInput.value;
+        const confirmPassword = confirmPasswordInput.value;
+
+        if (newPassword !== confirmPassword) {
+          alert('Passwords do not match.');
+          return;
+        }
+
+        if (newPassword.length < 6) {
+          alert('Password must be at least 6 characters long.');
+          return;
+        }
+
+        // Submit the form
+        form.submit();
+      });
+    </script>
+
+    <script>
+      var status = '<%- JSON.stringify(status) %>';
+      if (JSON.parse(status) == 'verified') {
+        if (confirm('Password changed successfully, would you like to login')) {
+          window.location.href = 'http://localhost:3000/login';
+        }
+      }
+    </script>
+  </body>
+</html>

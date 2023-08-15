@@ -1,0 +1,78 @@
+[{
+  "_id": {
+    "$oid": "643035c216bd886270d3a635"
+  },
+  "name": "Admin",
+  "email": "admin@ac.sce.ac.il",
+  "role": "Warehouse Manager",
+  "password": "admin12",
+  "isAdmin": true,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2023-04-07T15:24:50.519Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-07T15:24:50.519Z"
+  }
+},{
+  "_id": {
+    "$oid": "64397ec2a9f1b4a52abefed0"
+  },
+  "name": "Eden",
+  "email": "eden@ac.sce.ac.il",
+  "password": "123456",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2023-04-14T16:26:42.673Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-14T16:26:42.673Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643bd190db7dcaac57899cbb"
+  },
+  "name": "אמיר פוקמן",
+  "email": "amirfu@ac.sce.ac.il",
+  "role": "student",
+  "password": "123456",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2023-04-16T10:44:32.831Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-16T10:44:32.831Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643bd535ed3556799e686b8f"
+  },
+  "name": "yo",
+  "email": "yovel@ac.sce.ac.il",
+  "password": "31123112",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2023-04-16T11:00:05.395Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-16T11:00:05.395Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643da87abb485521478287ef"
+  },
+  "name": "Warehouse Manager",
+  "email": "Manager@ac.sce.ac.il",
+  "password": "Manager",
+  "isAdmin": false,
+  "createdAt": {
+    "$date": "2023-04-17T20:13:46.185Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-17T20:13:46.185Z"
+  },
+  "__v": 0
+}]
